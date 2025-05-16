@@ -5,10 +5,6 @@ let { code, map } = transform({
   code: Buffer.from('.foo { text-shadow: 0 2px 0 rgba(0, 0, 0, 0.05); }'),
   minify: true,
   sourceMap: true,
-  targets:  {
-    android: 6,
-    ios_saf: 12,
-  },
   visitor: {
     Length(len) {
       if (len.unit === 'px') {
